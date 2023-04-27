@@ -10,23 +10,69 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/listing/view/index.html">AuctIT</a>
+            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active " href="/profile/userprofile/index.html">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a> 
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
                 </ul>
             </div>
         </div>
-      </nav>
-    
+    </nav>
+        <main>
+            <div class="row">
+                <div class="col">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <div class="avatar-container">
+
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-name"></div>
+                            <div class="profile-tokens"></div>
+                        </div>
+                        <div class="profile-listing-container">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Bought</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bidded on</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Listed Items</button>
+                                </li>
+                            </ul>
+            
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">yo</div>
+                                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">check</div>
+                                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
