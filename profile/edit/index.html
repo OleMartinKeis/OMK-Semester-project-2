@@ -34,25 +34,25 @@
                     <img src="/IMGS/logo_transparent.png" alt="Logo for AuctIT" style="max-width: 350px; margin: 0 auto;">
                 </div>
                 <div class="container-md d-flex justify-content-center">
-                    <form class="ms-3">
+                    <form class="ms-3" id="editProfile">
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" disabled>
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" disabled>
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlInput1" class="form-label">Username</label>
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="example: AuctionArtist31" disabled>
+                            <input type="name" name="name" class="form-control" id="exampleFormControlInput1" placeholder="example: AuctionArtist31" disabled>
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password" disabled>
+                            <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="password" disabled>
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Avatar</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="paste a link here">
+                            <input type="url" name="avatar" class="form-control" id="exampleFormControlInput1" placeholder="paste a link here">
                         </div>
                         <div class="d-grid gap-2">
-                            <a href="../userprofile/index.html" class="btn btn-success">Change Avatar</button>
+                            <button class="btn btn-success">Change Avatar</button>
                             <a href="../userprofile/index.html" class="btn btn-outline-secondary">&#8678; Back</a>
                         </div>
                     </form>
