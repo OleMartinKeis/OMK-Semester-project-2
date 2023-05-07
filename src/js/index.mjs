@@ -1,6 +1,12 @@
 import { setLoginFormListener } from "./handlers/login.mjs";
 import { setRegisterFormListener } from "./handlers/register.mjs";
 
+const path = location.pathname;
 
-setLoginFormListener();
-setRegisterFormListener();
+if(path === '/index.html') {
+    setLoginFormListener();
+} else if (path === '/profile/register') {
+    setRegisterFormListener();
+}
+
+
