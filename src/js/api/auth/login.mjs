@@ -30,7 +30,6 @@ export async function login(profile) {
 
   storage.save("profile", user);
 
-  alert("You are logged in now");
 
-  location.href ="/posts/index.html"
+  location.href ="/listing/index.html"
 }
