@@ -15,5 +15,4 @@ export async function fetchWithToken(url, options = {}) {
         headers: headers(),
     });
 
-
 }
