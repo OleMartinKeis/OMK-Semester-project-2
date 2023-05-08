@@ -37,7 +37,7 @@
                     <h2>Create listing</h2>
                 </div>
                 <div class="container-md d-flex justify-content-center">
-                    <form class="ms-3">
+                    <form class="ms-3" id="createListing">
                         <div class="create-listing-p">
                             <p>What do you wish to sell?</p>
                         </div>
@@ -51,15 +51,15 @@
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlInput1" class="form-label">Picture 1</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                            <input type="url" name="picture-media1" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Picture 2</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                            <input type="url" name="picture-media2" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Picture 3</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                            <input type="url" name="picture-media3" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
                         </div>
                         <hr>
                         <div class="mb-3 w-125">
@@ -71,7 +71,7 @@
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Describe the current state of item, what it is and what it is used for.">
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-success">Create listing</button>
+                            <button class="btn btn-success">Create listing</button>
                             <a href="profile/register/index.html" class="btn btn-outline-secondary">&#8678; Back</a>
                         </div>
                     </form>
