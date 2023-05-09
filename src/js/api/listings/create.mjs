@@ -31,9 +31,6 @@ export async function createListing(listingData) {
             tags: tagsArray,
         }),
     });
-    
-    // const listing = await response.json
-    // return listing
 
     return await response.json();
 }
