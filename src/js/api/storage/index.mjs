@@ -9,8 +9,8 @@ export function load(key) {
     } catch {
         return null
     }
-    
 }
+
 
 export function remove(key) {
     localStorage.removeItem(key)
