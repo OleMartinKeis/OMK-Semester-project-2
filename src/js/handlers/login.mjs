@@ -9,7 +9,6 @@ export function setLoginFormListener() {
 
     if (form) {
         form.addEventListener("submit", (event) => {
-            console.log("hello")
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
