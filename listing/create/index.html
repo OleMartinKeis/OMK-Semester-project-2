@@ -43,7 +43,7 @@
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlInput1" class="form-label">Insert tags here</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Doors, Hats, microwave">
+                            <input type="text" name="tags" class="form-control" id="exampleFormControlInput1" placeholder="Doors, Hats, microwave">
                         </div>
                         <hr>
                         <div class="create-listing-p">
@@ -51,27 +51,32 @@
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlInput1" class="form-label">Picture 1</label>
-                            <input type="url" name="picture-media1" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                            <input type="url" name="media" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
                         </div>
-                        <div class="mb-3 w-125">
+                        <!-- <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Picture 2</label>
-                            <input type="url" name="picture-media2" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                            <input type="text" name="media" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Picture 3</label>
-                            <input type="url" name="picture-media3" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
-                        </div>
+                            <input type="text" name="media" class="form-control" id="exampleFormControlInput1" placeholder="photo.com">
+                        </div> -->
                         <hr>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title for the listing">
+                            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title for the listing" required>
                         </div>
                         <div class="mb-3 w-125">
                             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Describe the current state of item, what it is and what it is used for.">
+                            <input type="text" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Describe the current state of item, what it is and what it is used for.">
+                        </div>
+                        <hr>
+                        <div class="mb-3 w-125">
+                            <label for="exampleFormControlTextarea1" class="form-label">Ends at:</label>
+                            <input type="datetime" name="endsAt" class="form-control" id="exampleFormControlInput1" placeholder="2023/05/12" required>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-success">Create listing</button>
+                            <button type="submit" value="submit" class="btn btn-success">Create listing</button>
                             <a href="profile/register/index.html" class="btn btn-outline-secondary">&#8678; Back</a>
                         </div>
                     </form>
@@ -161,6 +166,7 @@
         </div>
 
     </footer>
+    <script src="/src/js/index.mjs" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
