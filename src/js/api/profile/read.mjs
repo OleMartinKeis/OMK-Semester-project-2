@@ -6,13 +6,11 @@ const path ="/profiles";
 
 
 
-export async function getProfile(id) {
+export async function getProfile(name) {
 
-    const getProfileURL = `${API_AUCT_URL}${path}/${id}?_listings=true`;
+    const getProfileURL = `${API_AUCT_URL}${path}/${name}?_listings=true`;
 
-    const response = await fetchWithToken(getProfileURL, {
-        headers: headers(),
-    })
-
-    return await response.json();
+    const response = await fetchWithToken(getProfileURL);
+    const profile = await response.json();
+    return profile;
 }

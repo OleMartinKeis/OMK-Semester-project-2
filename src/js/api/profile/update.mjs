@@ -13,7 +13,7 @@ export async function updateProfile(profileData) {
 
     const response = await fetchWithToken(updateProfileURL, {
         method,
-        headers: headers(),
+        
         body: JSON.stringify(profileData),
     });
     return await response.json();

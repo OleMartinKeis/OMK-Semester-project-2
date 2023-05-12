@@ -1,6 +1,6 @@
 import { getProfile, updateProfile } from "../api/profile/index.mjs";
 
-import { load } from "../api/storage/index.mjs";
+import { load, save } from "../api/storage/index.mjs";
 
 
 /**
@@ -11,17 +11,15 @@ import { load } from "../api/storage/index.mjs";
 export async function setUpdateProfileListener() {
     const form = document.querySelector("#editProfile");
     const setAvatar = document.querySelector("#avatar");
-    const firstName = document.querySelector("#firstName");
-   
-    try {
+    
+    const url = new URL(location.href);
+    const name = url.searchParams.get("name");
+
+    const user = await getProfile(name)
+
+    Image.src = user.avatar;
         if (form) {
             const {name, email, avatar} = load("profile");
-                
-            const button = form.querySelector("button");
-            
-            form.name.value = name;
-            form.email.value = email;
-            form.avatar.value = avatar;
         
             setAvatar.innerHTML = `<img src="${avatar}"
             class="img-fluid img-thumbnail rounded-circle mb-2"
@@ -32,19 +30,13 @@ export async function setUpdateProfileListener() {
                 const form = event.target;
                 const formData = new FormData(form);
                 const profile = Object.fromEntries(formData.entries());
-        
+                let profileExists = load("profile");
+                profileExists["avatar"] = avatar;
                 profile.name = name;
                 profile.email = email;
-                profile.avatar = avatar;
-                
-                updateProfile(profile)
+                save("profile", profileExists)
+                updateProfile(avatar)
+                window.location.reload();
             });
         }
-    }
-
-    catch(error) {
-        console.log(error)
-    }
-   
-    
 }

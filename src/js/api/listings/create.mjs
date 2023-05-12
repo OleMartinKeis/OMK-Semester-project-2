@@ -16,11 +16,9 @@ const method ="POST";
 export async function createListing(listingData) {
     const createListingURL = `${API_AUCT_URL}${path}`;
 
-    if(listingData.media[0] == [""]) {
-        delete listingData.media
-    }
 
-    const tagsArray = listingData.tags.split(",");
+    const mediaArray = listingData.media.split(",").map((link) =>link.trim())
+    const tagsArray = listingData.tags.split(",").map((tag) => tag.trim());
 
     const response = await fetchWithToken(createListingURL, {
         method,
@@ -29,7 +27,7 @@ export async function createListing(listingData) {
             title: listingData.title,
             description: listingData.description,
             endsAt: listingData.endsAt,
-            media: listingData.media[0, 1, 2],
+            media: mediaArray,
             tags: tagsArray,
         }),
     });
