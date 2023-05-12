@@ -14,20 +14,22 @@ const method ="POST";
 
 
 export async function createListing(listingData) {
-    const createListingURL = API_AUCT_URL + path;
+    const createListingURL = `${API_AUCT_URL}${path}`;
 
-    const comma = ","
+    if(listingData.media[0] == [""]) {
+        delete listingData.media
+    }
 
-    const tagsArray = listingData.tags.split(comma);
+    const tagsArray = listingData.tags.split(",");
 
     const response = await fetchWithToken(createListingURL, {
         method,
         headers: headers("application/json"),
         body: JSON.stringify({
             title: listingData.title,
-            description: listingData.body,
+            description: listingData.description,
             endsAt: listingData.endsAt,
-            media: listingData.media,
+            media: listingData.media[0, 1, 2],
             tags: tagsArray,
         }),
     });
