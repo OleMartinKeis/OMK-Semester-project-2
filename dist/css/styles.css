@@ -19,4 +19,24 @@ main {
 .btn-primary {
   background-color: #11b257;
   color: white;
+}
+
+.card-profile {
+  background-color: #8bcac8;
+}
+
+.card-body {
+  background-color: #8bcac8;
+}
+
+#listing-item-card {
+  background-color: #8bcac8;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.listing-container {
+  color: #000000;
 }/*# sourceMappingURL=styles.css.map */
