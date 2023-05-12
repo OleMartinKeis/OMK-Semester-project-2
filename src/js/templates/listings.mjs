@@ -38,7 +38,9 @@ export function listingTemplate(listingData) {
             <div class="bid-endsAt">
             <p>This item goes at : "${listingData.endsAt}" </p>
         </div>
-
+        <div class="listing-tags">
+            <p>Tags: ${listingData.tags}</p>
+        </div>
         <div class="listing-bids" style="margin-top: 10px;">
             <div class="listing-bid-card" style="border: 1px solid black;">
                 <div class="card-container d-flex">
