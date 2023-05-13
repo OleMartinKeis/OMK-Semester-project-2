@@ -6,7 +6,7 @@ const path = location.pathname;
 
 if(path === '/index.html' || path === "/") {
     handlers.setLoginFormListener();
-} else if (path === '/profile/register' || path === "/profile/") {
+} else if (path === '/profile/register/index.html' || path === "/profile/") {
     handlers.setRegisterFormListener();
 } else if (path === '/listing/index.html' || path === "/listing/") {
     handlers.displayListings(container)

@@ -41,7 +41,7 @@ export function profileTemplate(profileData) {
                             </div>
                         </form>
                         <div>
-                            <a href="/profile/edit/index.html?id=${profileData.id}" class="btn btn-primary btn-sm">Edit profile<a/>
+                            <a href="/profile/edit/index.html?name=${profileData.name}" class="btn btn-primary btn-sm">Edit profile<a/>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export function profileTemplate(profileData) {
         </div>
 `;
     
-    return profile
+    return profileData
 
 }
 
