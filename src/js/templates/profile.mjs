@@ -16,6 +16,7 @@ export function profileTemplate(profileData) {
     
     profileCard.innerHTML += 
     `
+    </div>
         <div class="card-profile mb-5" style="margin-top: 50px;">
             <div class="rounded-top d-flex flex-row" style="height: 200px">
                 <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px">
@@ -29,7 +30,7 @@ export function profileTemplate(profileData) {
                 <div class="mb-5">
                     <p class="lead fw-normal mb-1">About</p>
                     <div class="p-4">
-                        <p>Front-end Developer</p>
+                        <p>Credits: ${profileData.credits}</p>
                         <form>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example27" >Name</label>
@@ -43,6 +44,7 @@ export function profileTemplate(profileData) {
                         <div>
                             <a href="/profile/edit/index.html?name=${profileData.name}" class="btn btn-primary btn-sm">Edit profile<a/>
                         </div>
+
                     </div>
                 </div>
             </div>

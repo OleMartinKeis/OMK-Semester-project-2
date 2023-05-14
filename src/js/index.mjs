@@ -18,4 +18,5 @@ if(path === '/index.html' || path === "/") {
     
 }  else if (path === "/profile/userprofile/" || path === "/profile/userprofile/index.html") {
     handlers.readProfile(); 
+    handlers.logoutListener();
 }

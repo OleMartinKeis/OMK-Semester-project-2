@@ -36,7 +36,6 @@ export async function setUpdateProfileListener() {
                 profile.email = email;
                 save("profile", profileExists)
                 updateProfile(avatar)
-                window.location.reload();
             });
         }
 }
