@@ -1,4 +1,5 @@
 import { load } from "../api/storage/index.mjs"
+import { createBidHandler } from "../handlers/createBid.mjs";
 
 export function listingTemplate(listingData) {
 
@@ -30,12 +31,14 @@ export function listingTemplate(listingData) {
         <div class="listing-description">
             <p>${listingData.description}</p>
         </div>
-        <div class="listing-create-bid">
-        </div>
         <div class="auctioner-bidded-amount">
-            <p>Item price: ${itemPrice}</p>
+            <p>Item price: <strong>${itemPrice}</strong></p>
         </div>
-            <div class="bid-endsAt">
+        <div class="listing-create-bid d-flex justify-content-center align-items-baseline">
+            <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px; height: 50px" class="text-end px-2 py-1" />
+            <button class="w-90 mt-3 btn fw-light btn-secondary" id="bidBtn">Place bid</button>
+        </div>
+        <div class="bid-endsAt">
             <p>This item goes at : "${listingData.endsAt}" </p>
         </div>
         <div class="listing-tags">
@@ -49,7 +52,7 @@ export function listingTemplate(listingData) {
                     </div>
                     <div class="d-block">
                         <div class="card-profile-name">
-                            <h2>Seller: ${listingData.seller.name}</h2>
+                            <h4>Seller: ${listingData.seller.name}</h4>
                         </div>
                     </div>
                 </div>
@@ -61,3 +64,12 @@ export function listingTemplate(listingData) {
 return listing
 }
 
+export function renderListingTemplates(listingDataList, parent) {
+    parent.append(...listingDataList.map(listingTemplate));
+    
+} 
+
+export function renderListingTemplate(listingData, parent) {
+    parent.append(listingTemplate(listingData));
+    createBidHandler();
+}
