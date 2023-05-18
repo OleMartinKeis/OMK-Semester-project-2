@@ -7,7 +7,7 @@ const path ="/listings";
 
 export async function getListings() {
 
-    const getListingsURL = `${API_AUCT_URL}${path}?_bids=true&_seller=true`;
+    const getListingsURL = `${API_AUCT_URL}${path}?_bids=true&_seller=true&sort=created`;
 
     const response = await fetchWithToken(getListingsURL)
 
