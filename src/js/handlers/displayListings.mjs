@@ -9,7 +9,7 @@ export async function displayListings(container) {
 
         if (listings.length){
             
-            templates.listingTemplate(listings, container);
+            templates.renderListingTemplates(listings, container);
         }
     }
     catch(error){

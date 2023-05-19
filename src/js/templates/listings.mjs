@@ -1,3 +1,4 @@
+import { bidButton } from "../api/storage/bid.mjs";
 import { load } from "../api/storage/index.mjs"
 import { createBidHandler } from "../handlers/createBid.mjs";
 
@@ -66,10 +67,12 @@ return listing
 
 export function renderListingTemplates(listingDataList, parent) {
     parent.append(...listingDataList.map(listingTemplate));
-    
+    createBidHandler();
+    bidButton();
 } 
 
 export function renderListingTemplate(listingData, parent) {
     parent.append(listingTemplate(listingData));
     createBidHandler();
+    bidButton();
 }

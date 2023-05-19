@@ -9,6 +9,7 @@ export async function createBidHandler() {
 
         button.addEventListener("click", async (event) => {
             event.preventDefault();
+            console.log("hello")
             const bid = {
                 amount: Number(input.value)
             };

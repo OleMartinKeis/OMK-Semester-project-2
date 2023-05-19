@@ -9,13 +9,13 @@ if(path === '/index.html' || path === "/") {
 } else if (path === '/profile/register/index.html' || path === "/profile/") {
     handlers.setRegisterFormListener();
 } else if (path === '/listing/index.html' || path === "/listing/") {
-    handlers.displayListings(container)
+    handlers.displayListings(container);
+    handlers.searchFeedListings();
+    handlers.createBidHandler();
 } else if (path === '/listing/create/index.html' || path === "listing/create/") {
-    handlers.setCreateListingListener()
+    handlers.setCreateListingListener();
 } else if (path === "/profile/edit/" || path === "/profile/edit/index.html") {
-    
     handlers.setUpdateProfileListener();
-    
 }  else if (path === "/profile/userprofile/" || path === "/profile/userprofile/index.html") {
     handlers.readProfile(); 
     handlers.logoutListener();

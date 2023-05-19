@@ -5,14 +5,6 @@ import { fetchWithToken, headers } from "../fetchWithToken.mjs"
 const path ="/listings";
 const method ="POST";
 
-/** This fucntion will send a POST request to the server 
- * setCreatePostListener()  will use this function to create the post
- * 
- * @param {string} listingData  data contents of post
- * @returns 
- */
-
-
 export async function createListing(listingData) {
     const createListingURL = `${API_AUCT_URL}${path}`;
 
