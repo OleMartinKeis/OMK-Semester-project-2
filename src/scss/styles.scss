@@ -1,7 +1,4 @@
-.col {
-    padding-right: 0px;
-    padding-left: 0px;
-}
+
 
 body {
     background-color: #3A5E5B;
@@ -23,6 +20,20 @@ main {
 
 } 
 
+.navbar-brand {
+    font-style: none;
+}
+
+.a-guest {
+    color: #7DC0BB;
+    font-style: italic;
+    transition: 0.8ms;
+}
+
+a:hover {
+    color: #8bcac8;
+}
+
 .card-profile{
     background-color: #8bcac8;
 }
@@ -41,4 +52,14 @@ main {
 
 .listing-container {
     color: #000000;
+}
+
+.btn-secondary {
+    background-color: #D9D9D9;
+    color: #000;
+}
+
+.btn-secondary:hover{
+    transition: 0.8ms;
+    background-color: #6C757D;
 }
