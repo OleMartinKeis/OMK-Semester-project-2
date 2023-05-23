@@ -28,20 +28,20 @@ export function profileTemplate(profileData) {
             <div class="card-body">
                 <div class="mb-5">
                     <p class="lead fw-normal mb-1">About</p>
-                    <div class="p-4">
+                    <div class="p-1">
                         <p>Front-end Developer</p>
                         <form>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example27" >Name</label>
                                 <input type="text" disabled name="name" placeholder="${
                                   profileData.name
-                                }" class="form-control form-control-lg"/>
+                                }" class="form-control"/>
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example27">Email</label>
                                 <input type="email" disabled name="email" placeholder="${
                                   profileData.email
-                                }"class="form-control form-control-lg"/>
+                                }"class="form-control"/>
                             </div>
                         </form>
                         <div>
