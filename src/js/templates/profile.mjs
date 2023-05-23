@@ -58,7 +58,7 @@ export function profileTemplate(profileData) {
         </div>
 `;
 
-  return profile;
+  return profileData;
 }
 
 export function renderProfileTemplate(profileData, parent) {

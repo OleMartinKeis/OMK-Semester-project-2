@@ -6,14 +6,12 @@ const path = "/profiles";
 import { load } from "../storage/index.mjs";
 
 export async function getProfile(name) {
-   // let's supply the name from storage
+  // let's supply the name to you, it's friday and I want to fix you and go party. Kiddin. Well Kinda ;p
   const storageProfile = load("profile");
-  console.log(storageProfile.name);
   const getProfileURL = `${API_AUCT_URL}${path}/${storageProfile.name}`;
-  console.log("profile URL is " + getProfileURL);
 
   const response = await fetchWithToken(getProfileURL);
   const profile = await response.json();
-  console.log("GET PROFILE " + JSON.stringify(profile));
+  
   return profile;
 }

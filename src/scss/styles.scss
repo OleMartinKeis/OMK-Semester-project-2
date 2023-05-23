@@ -14,11 +14,15 @@ main {
 }
 
 .btn-primary {
-    
     background-color: #11b257;
     color: #FFFF;
-
+    border: 1px solid #1C2E2C
 } 
+
+.btn-primary:hover{
+    background-color: #7DC0BB;
+    border: 1px solid #1C2E2C;
+}
 
 .navbar-brand {
     font-style: none;
@@ -40,6 +44,7 @@ a:hover {
 
 .card-body{
     background-color: #8bcac8;
+    color: #000;
 }
 
 #listing-item-card {
