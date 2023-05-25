@@ -28,7 +28,7 @@ export function profileTemplate(profileData) {
                 <div class="mb-5">
                     <p class="lead fw-normal mb-1">About</p>
                     <div class="p-1">
-                        <p>Front-end Developer</p>
+                        <p>Credits: <strong>${profileData.credits}</strong></p>
                         <form>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example27" >Name</label>
