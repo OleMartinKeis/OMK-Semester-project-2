@@ -4,8 +4,17 @@ import { load, save } from "../api/storage/index.mjs";
 
 export async function createBidHandler() {
     document.addEventListener("DOMContentLoaded", () => {
-        const input = document.querySelector("#bidInput");
-        const button = document.querySelector("#bidBtn")
+        let input = document.querySelector("#bidInput");
+        let button = document.querySelector("#bidBtn");
+        const severalImages = document.querySelectorAll('input[name="media"]');
+        let mediaArray = [];
+
+        severalImages.forEach((media) => {
+            if (media.value !== "") {
+                mediaArray.push(media.value);
+                console.log(mediaArray)
+            }
+        })
 
         button.addEventListener("click", async (event) => {
             event.preventDefault();

@@ -56,7 +56,6 @@ export function profileTemplate(profileData) {
             <a href="../../posts/" class="btn btn-primary btn-md" width="" style="text-decoration: none; margin-top: 15px;">Back to feed</a>
         </div>
 `;
-    console.log(avatar)
   return profileData;
 }
 

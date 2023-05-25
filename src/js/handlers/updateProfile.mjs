@@ -8,7 +8,6 @@ import { load, save } from "../api/storage/index.mjs";
  */
 
 export async function setUpdateProfileListener() {
-  console.log("We are in setUpdateFormListener");
   const form = document.querySelector("#editProfile");
   const setAvatar = document.querySelector("#avatar");
 

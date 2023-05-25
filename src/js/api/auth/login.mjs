@@ -28,8 +28,5 @@ export async function login(profile) {
 
   storage.save("profile", user);
 
-  console.log(storage.load("profile"));
-  console.log(storage.load("token"));
-
   location.href = "/listing/index.html";
 }

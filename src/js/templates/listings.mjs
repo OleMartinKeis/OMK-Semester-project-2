@@ -4,27 +4,49 @@ import { createBidHandler } from "../handlers/createBid.mjs";
 
 export function listingTemplate(listingData) {
 
-    if (Array.isArray(listingData)) {
-        return listingData.map(listingTemplate)
+    let media = listingData.media[0];
+
+    let mediaCarousel;
+
+    if (media !== undefined) {
+        mediaCarousel = media;
+    } else {
+        mediaCarousel = "";
     }
+
+    let bids = listingData.bids;
+    let count;
+    let biddersName;
+
+
+    if (bids[0] !== undefined) {
+        count = bids[0].amount;
+        biddersName = bids[0].bidderName
+    } else {
+        count = "Be the first to bid!";
+        biddersName = "";
+    }
+ 
+    let listing = document.createElement("div");
     
-    const bidsArray = listingData.bids.map((e) => {
-        return e.amount;
-        });
-
-    const itemPrice = bidsArray.pop();
-
-    const profile = load("profile")
-
-    const listing = document.createElement("div");
-    const container = document.querySelector("#listings");
-    
-    
-
-    container.innerHTML+= `
+    listing.innerHTML+= `
     <div id="listing-item-card" class="container-lg">
-        <div class="listing-image d-flex justify-content-center">
-            <img src="${listingData.media}" class="image-fluid" alt="${listingData.seller.name} didnt choose a picture for the item" style="max-width: 250px; border: 1px solid black; padding: 1px; ">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="ratio ratio-16x9 mt-3 carousel-inner">
+                <div class="carousel-item active ratio ratio-16x9">
+                    <img src="${mediaCarousel}" alt="${listingData.seller.name} didn't choose an image" class="img-fluid" style="object-fit: cover;"/>
+                </div>
+                <div class="extra-imgs">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <div class="listing-header">
             <h1>${listingData.title}</h1>
@@ -33,8 +55,9 @@ export function listingTemplate(listingData) {
             <p>${listingData.description}</p>
         </div>
         <div class="auctioner-bidded-amount">
-            <p>Item price: <strong>${itemPrice}</strong></p>
-        </div>
+            <p>Current bidder:<strong>${biddersName}</strong></p>
+            <p>Bidded: <strong>${count}</strong></p>
+         </div>
         <div class="listing-create-bid d-flex justify-content-center align-items-baseline">
             <input type="number" name="bid" id="bidInput" placeholder="0" style="width: 60px; height: 50px" class="text-end px-2 py-1" />
             <button class="w-90 mt-3 btn fw-light btn-secondary" id="bidBtn">Place bid</button>
@@ -62,6 +85,8 @@ export function listingTemplate(listingData) {
     </div>
     `
 
+
+
 return listing
 }
 
@@ -75,4 +100,16 @@ export function renderListingTemplate(listingData, parent) {
     parent.append(listingTemplate(listingData));
     createBidHandler();
     bidButton();
+    imageCarousel(listingData);
+}
+
+async function imageCarousel(listingData) {
+    const carousel = document.querySelector(".extra-imgs")
+        const images = listingData[0].media;
+        images.forEach((image) => {
+            carousel.innerHTML="";
+            carousel.innerHTML += `<div class="carousel-item ratio ratio-16x9">
+                                        <img src="${image}" class="img-fluid" style="object-fit: cover;"/>
+                                    </div>`
+        })
 }

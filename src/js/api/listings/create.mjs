@@ -9,19 +9,10 @@ export async function createListing(listingData) {
     const createListingURL = `${API_AUCT_URL}${path}`;
 
 
-    const mediaArray = listingData.media.split(",").map((link) =>link.trim())
-    const tagsArray = listingData.tags.split(",").map((tag) => tag.trim());
-
     const response = await fetchWithToken(createListingURL, {
         method,
         headers: headers("application/json"),
-        body: JSON.stringify({
-            title: listingData.title,
-            description: listingData.description,
-            endsAt: listingData.endsAt,
-            media: mediaArray,
-            tags: tagsArray,
-        }),
+        body: JSON.stringify(listingData),
     });
 
     return await response.json();
