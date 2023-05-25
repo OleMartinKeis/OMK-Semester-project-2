@@ -2,7 +2,6 @@ import { setUpdateProfileListener } from "../handlers/updateProfile.mjs";
 
 export function profileTemplate(profileData) {
   const avatar = profileData.avatar;
-  console.log("This is the profileTemplate's function's avatar" + avatar);
 
   let currentAvatar;
 
