@@ -18,7 +18,7 @@ export function profileTemplate(profileData) {
         <div class="card-profile mb-5" style="margin-top: 50px;">
             <div class="rounded-top d-flex flex-row" style="height: 200px">
                 <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px">
-                    <img src="${currentAvatar}" id="avatar" class="img-fluid img-thumbnail rounded-circle mb-2" style="width: 150px; height: 150px; margin-top:-15px; z-index: 1">
+                    <img src="${currentAvatar}" id="avatar" class="img-fluid img-thumbnail rounded-circle mb-2" style="width: 150px; height: 150px; margin-top:-15px; z-index: 1"/>
                 </div>
                 <div class="ms-3" style="margin-top: 130px">
                     <h5>${profileData.name ? profileData.name : "Unknown"}</h5>
@@ -56,7 +56,7 @@ export function profileTemplate(profileData) {
             <a href="../../posts/" class="btn btn-primary btn-md" width="" style="text-decoration: none; margin-top: 15px;">Back to feed</a>
         </div>
 `;
-
+    console.log(avatar)
   return profileData;
 }
 

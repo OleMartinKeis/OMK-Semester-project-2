@@ -12,12 +12,7 @@ export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
   const setAvatar = document.querySelector("#avatar");
 
-  //   const url = new URL(location.href);
-  //   const name = url.searchParams.get("name");
 
-  //   const user = await getProfile();
-
-  //   Image.src = user.avatar;
   if (form) {
     var { name, email, avatar } = load("profile");
 
@@ -26,15 +21,14 @@ export async function setUpdateProfileListener() {
             style="width: 150px; height: 150px; margin-top:-15px; z-index: 1"/>`;
 
     form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const form = event.target;
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
 
-      const formData = new FormData(form);
-
-      var newProfileAvatar = Object.fromEntries(formData.entries());
+        var newProfileAvatar = Object.fromEntries(formData.entries());
         avatar = newProfileAvatar;
 
-      updateProfile(avatar);
+        updateProfile(avatar);
 
     });
   }

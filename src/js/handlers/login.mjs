@@ -6,7 +6,6 @@ import { login } from "../api/auth/login.mjs";
 
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
-  console.log("We are testing the login form now");
 
   if (form) {
     form.addEventListener("submit", (event) => {
