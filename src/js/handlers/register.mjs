@@ -17,6 +17,8 @@ export function setRegisterFormListener() {
       register(profile);
 
       alert("You successfully registered an account!");
+
+      location.href="../login/index.html"
     });
   }
 }

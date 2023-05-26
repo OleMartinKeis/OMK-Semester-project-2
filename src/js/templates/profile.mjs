@@ -53,7 +53,7 @@ export function profileTemplate(profileData) {
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-            <a href="../../posts/" class="btn btn-primary btn-md" width="" style="text-decoration: none; margin-top: 15px;">Back to feed</a>
+            <a href="../../listing/index.html" class="btn btn-primary btn-md" width="" style="text-decoration: none; margin-top: 15px;">Back to feed</a>
         </div>
 `;
   return profileData;

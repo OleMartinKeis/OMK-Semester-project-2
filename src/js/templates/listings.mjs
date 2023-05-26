@@ -4,6 +4,10 @@ import { createBidHandler } from "../handlers/createBid.mjs";
 
 export function listingTemplate(listingData) {
 
+    if (Array.isArray(listingData)) {
+        return listingData.map(listingTemplate)
+    }
+
     let media = listingData.media[0];
 
     let mediaCarousel;
@@ -13,7 +17,7 @@ export function listingTemplate(listingData) {
     } else {
         mediaCarousel = "";
     }
-
+    
     let bids = listingData.bids;
     let count;
     let biddersName;
@@ -26,10 +30,21 @@ export function listingTemplate(listingData) {
         count = "Be the first to bid!";
         biddersName = "";
     }
- 
-    let listing = document.createElement("div");
+
+    const bidsArray = listingData.bids.map((e) => {
+        return e.amount;
+        });
+
+    const itemPrice = bidsArray.pop();
+
+    const profile = load("profile")
+
+    const listing = document.createElement("div");
+    const container = document.querySelector("#listings");
     
-    listing.innerHTML+= `
+    
+
+    container.innerHTML+= `
     <div id="listing-item-card" class="container-lg">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="ratio ratio-16x9 mt-3 carousel-inner">
@@ -85,8 +100,6 @@ export function listingTemplate(listingData) {
     </div>
     `
 
-
-
 return listing
 }
 
@@ -100,7 +113,6 @@ export function renderListingTemplate(listingData, parent) {
     parent.append(listingTemplate(listingData));
     createBidHandler();
     bidButton();
-    imageCarousel(listingData);
 }
 
 async function imageCarousel(listingData) {
