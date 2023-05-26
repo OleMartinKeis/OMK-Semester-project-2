@@ -28,7 +28,7 @@ export async function setCreateListingListener() {
         
         createListing(listingData);
 
-        location.href="../index.html"
+        alert("Successfully created listing!")
 
     });
 }
