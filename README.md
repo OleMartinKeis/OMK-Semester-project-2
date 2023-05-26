@@ -36,7 +36,7 @@ A website created for Noroff Semester Project 2. An auction website where everyo
 To run the app, run the following commands:
 
 Initialize git 
-```bash
+```
 git init
 ```
 Install all dependencies
@@ -69,4 +69,4 @@ https://github.com/OleMartinKeis/Ole-Martin-Keiseraas-JS2-CA/tree/display-post-t
 ## Issues
 
 
-Update profile gets a weird error I can't fix.
+Not able to add bids to other posts.
