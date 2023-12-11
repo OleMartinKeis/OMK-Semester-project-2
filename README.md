@@ -41,7 +41,7 @@ A website created for Noroff Semester Project 2. An auction website where everyo
 
 ```bash
 git clone git@github.com:OleMartinKeis/OMK-Semester-project-2
-
+```
 2. Install the dependencies:
 
 ```
