@@ -37,20 +37,19 @@ A website created for Noroff Semester Project 2. An auction website where everyo
 
 ### How to use the project
 
- 1. Fork the repository
- 2. Clone the fork
- 3. Open the repository in your editor of choice
+1. Clone the repo:
+
+```bash
+git clone git@github.com:OleMartinKeis/OMK-Semester-project-2
+
+2. Install the dependencies:
+
+```
+npm install
+```
 
 To run the app, run the following commands:
 
-Initialize git 
-```
-git init
-```
-Install all dependencies
-```
-npm i
-```
 Build SASS when making scss changes
 ```
 npm run build
